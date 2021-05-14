@@ -8,8 +8,8 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/customersDB",{useNewUrlParser: true, useUnifiedTopology: true});
-
+// mongoose.connect("mongodb://localhost:27017/customersDB",{useNewUrlParser: true, useUnifiedTopology: true});
+ mongoose.connect("mongodb+srv://piyush:pcpcpc123@firstcluster.lanvn.mongodb.net/customersDB",{useNewUrlParser: true,useUnifiedTopology: true});
 
 const customerSchema =  new mongoose.Schema({
   accountno: Number,
@@ -126,6 +126,6 @@ app.post("/transferhistoryinfo",(req,res) => {
   });
 });
 
-app.listen(3000,() => {
+app.listen(process.env.PORT || 3000,() => {
   console.log("This server is working just fine.")
 });

@@ -7,6 +7,12 @@ body{
   position: relative;
   margin-right: 5rem;
 }
+.gobackbtn{
+  position: relative;
+  /* bottom: 0%; */
+  /* right: 5%; */
+  margin: 2%;
+}
 .cards-section{
   margin: 5% 0;
 }
@@ -60,10 +66,12 @@ body{
   margin-top: 10%;
 }
 .viewtransactionbtn{
-  margin: 5%;
-  position: relative;
-  /* right: 5%; */
-  bottom: 2%;
+  margin: 2%;
+  /* position: relative; */
+  width: auto;
+  /* display: inline; */
+  /* right: 7%; */
+  /* bottom: 2%; */
 }
 /*               Customers.ejs                */
 .customers-info{
